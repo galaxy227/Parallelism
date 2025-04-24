@@ -6,7 +6,7 @@ This project is benchmarking the performance of OpenMP and Threads in the C++ pr
 
 - What work does each thread do?
 
-Each thread is tasked with the function ```cpp random_work()```, where the goal is to fill a vector with integers in a given range using random number generation. The vector cannot have duplicate values, which forces the function to continue looping until all possible integers are generated. Furthermore, the function takes an integer argument to set the seed of the random number generation, ensuring all threads do equivalent work. Lastly, the number of threads is determined by OpenMP, then matched by C++'s Threads afterward.
+Each thread is tasked with the function ```random_work()```, where the goal is to fill a vector with integers in a given range using random number generation. The vector cannot have duplicate values, which forces the function to continue looping until all possible integers are generated. Furthermore, the function takes an integer argument to set the seed of the random number generation, ensuring all threads do equivalent work. Lastly, the number of threads is determined by OpenMP, then matched by C++'s Threads afterward.
 
 - What parameters were selected for each thread's work?
 
@@ -14,7 +14,7 @@ The only variable changed between each measurement was the seeded value to colle
 
 - What are the results?
 
-Most benchmarks measured between four to six seconds for both methods of parallelism regardless of which implementation was used. After running the program hundreds of times, we observed C++'s Threads to be roughly 10% faster than OpenMP. Unfortunately,
+Most benchmarks measured between four to six seconds for both methods of parallelism regardless of which implementation was used. After running the program hundreds of times, we observed C++'s Threads to be roughly 10% faster than OpenMP.
 
 - What could we do better?
 
@@ -22,4 +22,4 @@ First and foremost, we should record a collection of benchmarks to prove our fin
 
 ## TL;DR
 
-Using threads to process ```cpp random_work()``` is usually faster than OpenMP.
+Using threads to process ```random_work()``` is usually faster than OpenMP.
